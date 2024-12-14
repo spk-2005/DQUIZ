@@ -1,0 +1,95 @@
+
+#addtests {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #teshead{
+    text-align: center;
+    text-shadow: 0px 4px 16px rgb(0, 98, 255);
+  }
+  
+  #addtests form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em; 
+    background-color: #f0f8ff; 
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  #addtests form input,
+  #addtests form select {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fffaf0; 
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s; 
+  }
+  
+  #addtests form input:focus,
+  #addtests form select:focus {
+    border-color: #007bff; 
+  }
+  
+  #addtests form button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #addtests form button:hover {
+    background-color: #0056b3; 
+  }
+  
+  #addtests form select option[disabled] {
+    color: #aaa; 
+  }
+  
+  @media (max-width: 768px) {
+    #addtests form {
+      padding: 1.5em;
+      width: 90%;
+    }
+  
+    #addtests form input,
+    #addtests form select,
+    #addtests form button {
+      max-width: 100%;
+    }
+  
+    #addtests {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #addtests form {
+      padding: 1em;
+    }
+  
+    #addtests form input,
+    #addtests form select,
+    #addtests form button {
+      font-size: 14px; 
+      padding: 8px;
+    }
+  }
+  

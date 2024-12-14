@@ -1,0 +1,42 @@
+#userslist{
+    margin-top: 4em;
+}
+#sbut{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 14vh;           
+    margin: 0;
+}
+#sbut button{
+    border-radius: 5px;
+    background-color: hwb(215 15% 27%);
+    color: white;
+    padding: .2em;    
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+#sbut button:hover{
+    background-color: hwb(215 15% 27% / 0.7);;
+}
+
+#uid{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+#table-section{
+    display: flex;
+    justify-content: center;
+}
+#head{
+    color: blueviolet;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .3px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}

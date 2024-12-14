@@ -1,0 +1,59 @@
+#newregist{
+    justify-content: center;
+}
+#newregist table{
+    margin-top: 7em;
+    border: none;
+    background: linear-gradient(100deg,rgb(179, 156, 43),rgb(154, 185, 123),rgb(247, 238, 194));
+    padding: 2em;
+    border-radius: 10px;
+}
+#newregist table td{
+    border: none;
+}
+#newregist 
+#addtests select option[disabled] {
+  color: #aaa; 
+}
+#newregist option{
+    background-color:rgb(239, 214, 181);
+}
+#newregist select{
+    font-size: 20px;
+    height: 30px;
+}
+
+#newregist select,#newregist input{
+width:200px;
+border-radius: 5px;
+border: 2px solid black !important;
+
+}
+
+#newregist table td input{
+    font-size:15px;
+    border-radius: 5px;
+    border-color: transparent;
+    padding: .4em;
+}
+
+#rbut{
+    display: flex;
+    justify-content: center;
+}
+#rbut button{
+    cursor:pointer;
+    font-size: 20px;
+    padding: .4em;
+    background: linear-gradient(55deg,rgb(223, 211, 139),rgb(208, 148, 133));
+    box-shadow: 0px 4px 16px grey;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border-radius: 25px;
+    margin-top: 2em;
+}
+
+#rbut button:hover{
+    background-color: rgb(85, 96, 252);
+}

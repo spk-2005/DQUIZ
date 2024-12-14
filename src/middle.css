@@ -1,0 +1,68 @@
+/* Marquee Container */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+/* Marquee Animation */
+.marquee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: marquee 14s linear infinite; /* Marquee animation */
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translate(-100%);
+    }
+}
+
+/* Marquee Button */
+.marquee button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative; 
+    margin-left: 10px; /* Add spacing between text and button */
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+/* Underline Effect */
+.marquee button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width 0.3s ease; 
+    margin-top: -1px; 
+}
+
+/* Hover Effect */
+.marquee button:hover::after {
+    width: 100%; 
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .marquee-container {
+        padding: 5px 0; /* Adjust padding on smaller screens */
+    }
+
+    .marquee button {
+        font-size: 1.2rem; /* Adjust button size on smaller screens */
+    }
+
+    .marquee {
+        animation-duration: 20s; /* Slower animation on smaller screens */
+    }
+}

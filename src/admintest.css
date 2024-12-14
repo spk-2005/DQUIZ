@@ -1,0 +1,138 @@
+#ares {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for better spacing on smaller screens */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+#testres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: visible;
+}
+
+#testres ol {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Change to column layout for smaller screens */
+    gap: 15px; /* Add gap for spacing between items */
+}
+
+#testres ol li {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; 
+    padding: 1em;
+    text-align: center; /* Center the text */
+}
+
+#testres ol li:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#testres ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    z-index: 100; 
+    overflow: hidden;
+}
+
+#testres ul li {
+    background-color: #ffb300;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px; /* Add padding for better touch targets */
+}
+
+#testres ul li:hover {
+    background-color: #ffb30091;
+}
+
+#testres ol li:hover ul {
+    display: block; 
+    animation: fadeIn 0.3s ease;
+}
+
+#headr {
+    text-align: center;
+    text-shadow: 0px 8px 16px grey;
+    font-size: 32px; /* Default font size */
+    margin-bottom: 20px; /* Add margin for better spacing */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    #headr {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    #testres ol {
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    #testres ol li {
+        font-size: 16px;
+    }
+
+    #testres ul li {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    #headr {
+        font-size: 28px;
+    }
+
+    #testres ol {
+        flex-direction: row; /* Change back to row layout for larger screens */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: center; /* Center the items */
+        gap: 15px; /* Add gap for better spacing */
+    }
+
+    #testres ol li {
+        font-size: 18px;
+        flex: 1 1 calc(33.33% - 20px); /* Allow items to take up equal space */
+        max-width: calc(33.33% - 20px); /* Set max width to ensure proper layout */
+    }
+
+    #testres ul li {
+        font-size: 16px;
+    }
+}

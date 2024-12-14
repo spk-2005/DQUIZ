@@ -1,0 +1,134 @@
+/* Container Styling */
+#adme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    min-height: 100vh;
+}
+
+/* Heading Styling */
+#adme h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Menu Styling */
+#menu {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Menu List Styling */
+#menu ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu List Item Styling */
+#menu ol li {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative; /* For before and after pseudo-elements */
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+#menu ol li:last-child {
+    border-bottom: none;
+}
+
+/* Menu List Item Link Styling */
+#menu ol li a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Menu Item */
+#menu ol li:hover {
+    background: #f0f8ff;
+    transform: translateY(-2px);
+}
+
+/* Active Menu Item Styling */
+#menu ol li.active {
+    background: #007bff;
+    color: #ffffff;
+}
+
+#menu ol li.active a {
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #adme h2 {
+        font-size: 2em;
+    }
+
+    #menu {
+        max-width: 90%;
+    }
+
+    #menu ol li {
+        font-size: 1.2em;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    #adme h2 {
+        font-size: 1.8em;
+    }
+
+    #menu ol li {
+        font-size: 1em;
+        padding: 0.6em;
+    }
+}

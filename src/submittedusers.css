@@ -1,0 +1,119 @@
+/* Container Styles */
+#asub {
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 90%;
+    border-radius: 10px; /* Add subtle border radius for a softer look */
+    background-color: #f7f9fc; /* Light background for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+table th,
+table td {
+    padding: 1em;
+    text-align: left; /* Consistent left alignment for easier reading */
+    border: 1px solid #ddd;
+}
+
+/* Alternate Row Colors and Hover Effect */
+table tbody tr:nth-child(even) {
+    background-color: #e6f7ff; /* Lighter blue */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f2ffe6; /* Lighter green */
+}
+
+table tbody tr:hover {
+    background-color: #ddd; /* Subtle hover effect for selection indication */
+}
+
+/* Header Styles */
+#asub h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #444;
+    background: linear-gradient(to right, #36d1dc, #5b86e5); /* Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.5s ease;
+    padding: 1em 0; /* Add some padding for better visual separation */
+    border-radius: 10px; /* Match container border radius for consistency */
+}
+
+#asub h2:hover {
+    color: #ff6347; /* Tomato color */
+    -webkit-text-fill-color: inherit;
+}
+
+/* Button Styles */
+#las {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+#las button {
+    font-size: 18px; /* Adjust font size based on preference */
+    font-family: arial, sans-serif; /* Specify a reliable font family */
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+    padding: 0.7em 1.5em; /* Adjust padding based on preference */
+    margin: 1em;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#las button:hover {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #asub h2 {
+        font-size: 1.5em;
+    }
+
+    #asub table th,
+    #asub table td {
+        padding: 0.8em;
+    }
+
+    #las button {
+        font-size: 16px;
+        padding: 0.5em 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #asub h2 {
+        font-size: 1em;
+    }
+    #asub
+    {
+        overflow-x: scroll;
+        padding: 0px;
+    }
+    #asub table th,
+    #asub table td {
+        padding: 0.5em;
+        font-size: .5rem;
+    }
+
+    #las button {
+        font-size: 15px;
+        padding: 0.4em .5em;
+    }
+}

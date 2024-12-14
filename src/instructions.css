@@ -1,0 +1,368 @@
+#inst {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column; 
+}
+
+#inst ol li {
+    margin-top: 1em;
+}
+
+#inst p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 20px;
+}
+
+center {
+    margin-top: 3em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mainins center font {
+    font-size: 16px;
+}
+
+#empty {
+    height: 60px;
+    background-color: #3b5998;
+    position: relative;
+}
+
+#inshead {
+    position: sticky;
+    top: 0;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #676568;
+    width: 100%;
+    text-align: center;
+    background-color: #BCE8F5;
+}   
+
+#mainins h4 {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2em;
+    text-align: center;
+}
+
+#mainins {
+    height: 530px;
+    overflow-y: auto;
+    margin: 0;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+#inscontrols1 label {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    text-align: center;
+}
+#inscontrols1 button {
+    font-size: 20px;
+    padding: 0.3em;
+    border-radius: 5px;
+    background-color: rgb(79, 153, 222);
+    color: white;
+    border: 1px solid black;
+}
+
+#sec {
+    list-style-type: lower-alpha;
+}
+
+#user img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#user span {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#user {
+    width: 200px;
+    border-left: 1px solid black;   
+}
+
+#inst ul {
+    align-items: center;
+}
+#inst ul li {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Status Indicators */
+.notvisited {
+    background: url(questions-images.png) no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    height: 38px;
+    line-height: 42px;
+    margin: 3px;
+    text-align: center;
+    width: 34px;
+    background-position: -105px -49px;
+    color: #474747;
+    position: relative;
+}
+
+.notvisited::before {
+    content: "1";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #000000;
+}
+
+.visitednotans {
+    background: url(questions-images.png) no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    height: 38px;
+    line-height: 42px;
+    margin: 3px;
+    text-align: center;
+    width: 34px;
+    background-position: -39px -48px;
+    color: #474747;
+    position: relative;
+}
+
+.visitednotans::before {
+    content: "3";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.visitedans {
+    background: url(questions-images.png) no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    height: 38px;
+    line-height: 42px;
+    margin: 3px;
+    text-align: center;
+    width: 34px;
+    background-position: -5px -48px;
+    color: #474747;
+    position: relative;
+}
+
+.visitedans::before {
+    content: "5";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #fff6f6;
+}
+
+.notansmarked {
+    background: url(questions-images.png) no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    height: 38px;
+    line-height: 42px;
+    margin: 3px;
+    text-align: center;
+    width: 34px;
+    background-position: -72px -48px;
+    color: #474747;
+    position: relative;
+}
+
+.notansmarked::before {
+    content: "8";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #fff6f6;
+}
+
+.ansmarked {
+    background: url(questions-images.png) no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    height: 38px;
+    line-height: 42px;
+    margin: 3px;
+    text-align: center;
+    width: 34px;
+    background-position: -169px -47px;
+    color: #474747;
+    position: relative;
+}
+
+.ansmarked::before {
+    content: "7";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #fff6f6;
+}
+/* Button styling */
+#ready {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: white;
+    font-size: 20px;
+    background-color: #0800ff;
+    padding: .2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Apply a different background when checkbox is checked */
+.confirmed {
+    background-color: #66ff00;
+}
+
+/* Disabled button styling */
+#ready:disabled {
+    background-color: #2600ff; /* Lighter color when disabled */
+    cursor: not-allowed;
+}
+
+#ready:hover:not(:disabled) {
+    background-color: #006402; /* Darker blue for hover */
+}
+
+
+@media screen and (min-width: 768px) {
+    #inst {
+        flex-direction: row; 
+    }
+
+    #mainins {
+        width: 70%;
+    }
+
+    #user {
+        display: block;
+        width: 30%;
+    }
+
+    #inscontrols1 {
+        width: 100%;
+        border-right: 3px solid black;
+    }
+
+    #inscontrols1 {
+        width: 70%;
+    }
+
+    #inscontrols1 form #insnext {
+        float: right;
+    }
+
+    #inscontrols1 form #insprev,
+    #inscontrols1 form #insnext {
+        cursor: pointer;
+        width: fit-content;
+        margin: 1em;
+        font-size: 20px;
+        background-color: white;
+        border: 2px solid grey;
+        padding: 0.2em;
+        border-radius: 2px;
+        color: #000000;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #inscontrols1 form #insprev:hover,
+    #inscontrols1 form #insnext:hover {
+        background-color: #496ebf;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #inst {
+        flex-direction: column; 
+    }
+
+    #mainins {
+        width: 100%;
+    }
+
+    #user {
+        display: block; 
+        width: 100%;
+        height: 200px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .notvisited,
+    .visitednotans,
+    .visitedans,
+    .notansmarked,
+    .ansmarked {
+        
+        margin:.3em;
+    }
+
+    .notvisited::before,
+    .visitednotans::before,
+    .visitedans::before,
+    .notansmarked::before,
+    .ansmarked::before {
+        font-size: 18px; 
+    }
+    
+    #inscontrols1 form #insprev, 
+    #inscontrols1 form #insnext {
+        font-size: 18px; 
+        padding: 0.4em;
+    }
+    
+    #inscontrols1 {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid black; 
+    }
+    
+    #inscontrols1 form #insprev, 
+    #inscontrols1 form #insnext {
+        width: 48%; 
+        margin: 0.5em 1%;
+    }
+
+}

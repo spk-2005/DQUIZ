@@ -1,0 +1,238 @@
+/* Admin Container */
+#admin {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    margin: 0;
+    background-color: #f0f4f8; /* Light background for contrast */
+}
+
+/* Admin Form */
+#admin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc; 
+    padding: 20px;
+    border-radius: 8px; 
+    background-color: #ffffff; /* White background for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for decoration */
+    width: 90%;
+    max-width: 400px; /* Max width for better control on larger screens */
+    position: relative;
+    overflow: hidden; /* Ensure pseudo-elements do not overflow */
+}
+
+/* Header Text */
+#ahead {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Admin Form Input */
+/* Admin Form Input */
+#admin form input {
+    border: 2px solid #007bff; /* Blue border for input fields */
+    background-color: #e7f1ff; /* Light blue background for inputs */
+    font-size: 1em;
+    margin: 10px 0; 
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    outline: none; /* Remove default focus outline */
+}
+
+/* Input Focus State */
+#admin form input:focus {
+    border-color: #0056b3; /* Darker blue border on focus */
+    background-color: #ffffff; /* Change background to white on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Light blue shadow on focus */
+}
+
+/* Input Placeholder Styling */
+#admin form input::placeholder {
+    color: #000000; /* Light blue placeholder text */
+    opacity: 0.8;
+}
+
+/* Input Placeholder Hover Effect */
+#admin form input:hover::placeholder {
+    color: #000000; /* Darker blue placeholder text on hover */
+}
+
+/* Input After Effect */
+#admin form input::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1; /* Behind the input text */
+}
+
+/* Input Hover Effect */
+#admin form input:hover::after {
+    opacity: 0.1; /* Show light blue overlay on hover */
+}
+
+/* Input Focus Effect */
+#admin form input:focus::after {
+    opacity: 0.2; /* Increase overlay opacity on focus */
+}
+
+/* Submit Button */
+#admin form button {
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+#admin form button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 123, 255, 0.2); /* Light blue circle effect */
+    transition: width 0.3s ease, height 0.3s ease;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#admin form button:hover::before {
+    width: 160%; /* Expand the circle on hover */
+    height: 160%;
+}
+
+#admin form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Menu Styles */
+#menu {
+    display: flex;
+    justify-content: center; 
+    align-items: center;             
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+#menu ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center menu items */
+}
+
+#menu ol li {
+    margin: 0 10px; /* Spacing between menu items */
+    position: relative;
+}
+
+#menu ol li a {
+    text-decoration: none;
+    color: #333; 
+    position: relative;
+    display: inline-block; 
+    font-size: 1.2em;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+#menu ol li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #007bff;
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+#menu ol li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    background-color: rgba(0, 123, 255, 0.2); /* Light blue overlay */
+    transition: height 0.3s ease; /* Smooth transition */
+}
+
+#menu ol li a:hover::before {
+    width: 90%; /* Full width of the link */
+}
+
+#menu ol li a:hover::after {
+    height: 2px; /* Reveal overlay on hover */
+}
+
+#menu ol li a:hover {
+    color: #007bff; /* Change text color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #admin form {
+        width: 90%;
+        max-width: 350px; /* Slightly smaller max width for tablets */
+    }
+
+    #admin form input {
+        font-size: 0.9em; /* Adjust input font size */
+    }
+
+    #admin form button {
+        font-size: 1em; /* Adjust button font size */
+    }
+
+    #menu ol li a {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #admin form {
+        width: 90%;
+        max-width: 300px; /* Adjust for very small screens */
+    }
+
+    #admin form input {
+        font-size: 0.8em; /* Adjust input font size */
+    }
+
+    #admin form button {
+        font-size: 0.9em; /* Adjust button font size */
+    }
+
+    #menu ol li a {
+        font-size: 0.9em; /* Adjust font size for very small screens */
+    }
+}

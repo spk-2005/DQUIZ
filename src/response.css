@@ -1,0 +1,52 @@
+#response{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+}
+#response table{
+    margin-top: 2em;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#response table tr:nth-child(1) td:nth-child(1),#response table tr:nth-child(2) td:nth-child(1){
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#user,#qres{
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+#response table td{
+font-size: 20px;
+padding: 1em;
+text-align: left;
+}
+#response table p{
+    text-align: left;
+    font-weight: 600;
+    text-decoration: underline;
+}
+#response button{
+    margin-top: 1em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border:1px solid rgb(0, 94, 255);
+    border-radius: 5px;
+    background-color: aqua;
+    width: calc(100% - 80%);
+    font-size: 20px;
+    font-weight: 600;
+    font-style: oblique;
+}
+
+ 

@@ -1,0 +1,170 @@
+#fsub {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#fsub table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    overflow-x: auto;
+    table-layout: auto; /* Ensure columns adjust width based on content */
+}
+
+#fsub th,
+#fsub td {
+    padding: 0.8em;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#fsub th {
+    background-color: rgb(156, 193, 219);
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#fsub td {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+#fsub tr:hover td {
+    background-color: #e0f0ff;
+}
+
+#fsub form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+#ynbuts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#fsub span {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #333;
+    animation: fadeInText 0.8s ease-in-out;
+}
+
+#fsub button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    background-color: transparent;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#fsub button:hover {
+    background-color: rgb(62, 145, 218);
+    color: white;
+    transform: scale(1.05);
+}
+
+#fsub button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #fsub table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #fsub th,
+    #fsub td {
+        padding: 0.5em;
+        font-size: 1em; /* Adjusted for clarity */
+    }
+
+    #fsub form {
+        flex-direction: column;
+    }
+
+    #ynbuts {
+        flex-direction: column;
+    }
+
+    #fsub button {
+        width: 100%;
+        margin: 0.5em 0;
+    }
+}
+
+@media (min-resolution: 300dpi) {
+    #fsub th,
+    #fsub td {
+        font-size: 1.2em; /* Adjusted for high DPI screens */
+        padding: 1em;
+    }
+
+    #fsub span {
+        font-size: 1.4em;
+    }
+
+    #fsub button {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 400px) {
+    #fsub table {
+        width: 100%;
+        font-size: 0.8em; /* Adjusted for very small screens */
+    }
+
+    #fsub th, #fsub td {
+        padding: 0.5em;
+        text-align: left;
+    }
+
+    #fsub th {
+        font-size: 0.9em;
+    }
+
+    #fsub td {
+        font-size: 0.8em;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,164 @@
+/* Titles Container */
+#titles {
+    background: radial-gradient(circle, rgb(165, 165, 165) 0%, rgb(250, 250, 250) 100%);
+    max-width: 1200px;
+    margin: 3em auto;
+    width: 90%; /* Use percentage for better responsiveness */
+    font-family: 'Arial', sans-serif;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for decoration */
+    position: relative;
+}
+
+/* Titles Header */
+#titles h2 {
+    text-align: center;
+    font-size: 2.5em; /* Larger heading */
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+/* Decorative Underline for the Header */
+#titles h2::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#titles h2:hover::before {
+    width: 120px; /* Expand on hover */
+}
+
+/* Titles List */
+#titles ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Space out items */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#titles ol li {
+    font-weight: 700; /* Make it bolder */
+    cursor: pointer;
+    font-size: 45px;
+    color: #444;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 220px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for decoration */
+    margin: 1em;
+    overflow: hidden; /* Hide overflow */
+    text-transform: uppercase; /* Uppercase for a bold effect */
+    background: linear-gradient(90deg, #80f2ff, #13ccff); /* Add gradient background */
+    color: white; /* Text color contrast */
+    letter-spacing: 2px; /* Spacing between letters */
+    font-family: 'Poppins', sans-serif; /* Add a more decorative font */
+    animation: pulse 2s infinite; /* Continuous pulsing effect */
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#titles ol li:hover {
+    transform: scale(1.1); /* Scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    background: linear-gradient(90deg, #00ffcc, #00fff2); /* Gradient transition */
+    color: #000000; /* Change text color */
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width:3px;
+}
+
+@keyframes pulse { 
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Decorative Before and After Elements */
+#titles ol li::before,
+#titles ol li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0) 70%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+#titles ol li::after {
+    background: linear-gradient(225deg, rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0) 70%);
+}
+
+#titles ol li:hover::before,
+#titles ol li:hover::after {
+    opacity: 1;
+    transform: scale(1); 
+}
+
+/* Ensure Text Appears Above Background */
+#titles ol li span {
+    position: relative;
+    z-index: 1; /* Ensure text is above the gradient */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #titles h2 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    #titles ol {
+        flex-direction: column;
+        align-items: center; /* Center items in column layout */
+    }
+
+    #titles ol li {
+        font-size:40px; /* Adjust font size for smaller screens */
+        width: 180px; /* Adjust width */
+        height: 180px; /* Adjust height */
+    }
+}
+
+@media (max-width: 480px) {
+    #titles h2 {
+        font-size: 1.6em; /* Smaller heading for very small screens */
+    }
+
+    #titles ol li {
+        font-size: 35px; /* Smaller font size */
+        width: 170px; /* Adjust width */
+        height: 170px; /* Adjust height */
+    }
+}

@@ -1,0 +1,95 @@
+/* Navigation container */
+#nav {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Flex container for menu items */
+#nav ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Menu item styles */
+#nav ol li {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Link styles */
+#nav ol li a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover and active states */
+#nav ol li a:hover,
+#nav ol li.active a {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Decorative underline animation */
+#nav ol li:before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#nav ol li:hover:before,
+#nav ol li.active:before {
+    width: 100%;
+    left: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #nav {
+        padding: 10px;
+    }
+
+    #nav ol {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    #nav ol li {
+        margin: 10px 0;
+    }
+
+    #nav ol li a {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+    #nav ol li a {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+}

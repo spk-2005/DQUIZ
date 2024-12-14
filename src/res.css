@@ -1,0 +1,152 @@
+/* Overall Styling */
+#result {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff; /* Light background for better readability */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: fadeIn 0.8s ease-in-out;
+    font-family: sans-serif; /* Consistent font family */
+  }
+  
+  #result:hover {
+    transform: scale(1.02);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Headers and Text */
+  #result h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  #result p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5; /* Improved readability */
+  }
+  
+  #result span.highlight {
+    color: #4CAF50; /* Green for emphasis */
+  }
+  
+  /* Table Styling */
+  #result table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff; /* Light background */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #result td {
+    padding: 12px; /* Consistent padding */
+    font-size: 1rem; /* Consistent font size */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #result tr:nth-child(even) { /* Alternate row color for better contrast */
+    background-color: #f1f1f1;
+  }
+  
+  #result tr:hover {
+    background-color: #e8e8e8; /* Lighter hover color */
+  }
+  
+  #result table th {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd; /* Emphasize headers */
+  }
+  
+  /* Button Styling */
+  #result button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center; /* Center-aligned text */
+  }
+  
+  #result button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 768px) {
+    #result {
+      padding: 15px;
+    }
+  
+    #result h1 {
+      font-size: 1.8rem;
+    }
+  
+    #result p {
+      font-size: 0.9rem;
+    }
+  
+    #result table {
+      font-size: 0.9rem;
+    }
+  
+    #result button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }/* ... (existing CSS) */
+
+@media only screen and (max-width: 480px) {
+    #result {
+      padding: 10px;
+    }
+  
+    #result h1 {
+      font-size: 1rem;
+      margin: 0;
+      padding: 10px;
+    }
+  
+    #result table {
+      width: 100%; /* Maintain table width */
+      border-collapse: collapse;
+      font-size: 0.6rem; /* Reduce font size */
+    }
+  
+    #result th, #result td {
+      padding: 10px;
+      text-align: left;
+      font-size: .7rem;
+    }
+  
+    #result th {
+      font-weight: bold;
+    }
+  
+    #result button {
+      padding: 8px 12px;
+      font-size: 0.8rem;
+    }
+  }
